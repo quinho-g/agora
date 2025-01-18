@@ -1,0 +1,320 @@
+/*Aviso de Direitos Autorais
+
+Este código é protegido por direitos autorais. Ele é disponibilizado 
+exclusivamente para fins de estudo, pesquisa ou uso educacional. 
+Qualquer reprodução, redistribuição, comercialização ou uso não autorizado, 
+parcial ou integral, sem a devida permissão do autor, constitui violação de 
+direitos autorais e está sujeito às sanções previstas na legislação vigente.
+
+Caso deseje utilizá-lo para outras finalidades, entre em contato com o 
+autor para obter a autorização necessária.*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kaushan+Script&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Patua+One&family=Permanent+Marker&family=Pirata+One&family=Suez+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Lilita One',Arial, Helvetica, sans-serif;
+    }
+
+body {
+   perspective: 10000px;
+   perspective-origin: 50% 50%;
+   overflow-y: hidden;
+   overflow-x: hidden;
+   height: 100vh;
+   width: 100vw;
+   max-width: 100%;
+   background-color: rgb(155, 2, 250);
+}
+
+.marca {
+    font-size: 2vw;
+    padding-bottom: 2vw;
+    padding-top: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.perfil {
+    width: 10vw;
+    height: 10vw;
+    position: relative;
+    display: flex;
+    margin: 2vw auto;
+    transform-style: preserve-3d;
+    animation: perfil 3s linear infinite;
+}
+
+@keyframes perfil {
+    to {
+        transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+    }
+}
+
+.lado {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    overflow: hidden;
+}.l1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    object-position: 0% 0%;  
+}
+
+.l1 {
+    transform: translateZ(1.5vw);
+    background-color: rgb(255, 255, 255);
+}
+
+.l2 {
+    transform: translateZ(-1.5vw);
+    background-color: rgb(255, 255, 255);
+}.l2 img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;  
+    filter: drop-shadow(0 0 0.3vw rgb(174, 0, 255));
+    object-position: 0% 0%;  
+}
+
+.l3 {
+    transform: translateZ(1.48vw);
+    background-color: rgb(255, 255, 255);
+}
+
+.l4 {
+    transform: translateZ(-1.48vw);
+    background-color: rgb(253, 251, 255);
+}
+
+.meio {
+    height: 10vw;
+    width: 2.9vw;
+    background-color: rgb(255, 255, 255);
+    transform: rotateY(90deg);
+}
+
+h1 {
+    font-family: 'Lilita One', Arial, Helvetica, sans-serif;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    margin-bottom: 1vw;
+} h2 {
+    font-size: 2vw;
+    margin-top: 2vw;
+    text-transform: uppercase;
+}
+
+.retangulo {
+    flex-direction: row;
+    border: 0.3vw solid rgb(102, 1, 169);
+    margin-top: 2vw;
+    margin: 2vw auto;
+    gap: 3vw;
+    height: 6vw;
+    width: 30vw;
+    border-radius: 1.6vw;
+    background-color: rgb(155, 2, 250);
+}.retangulo:hover {
+    transform: scale(1.06);
+}
+
+.retangulo h3 {
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+i {
+    font-size: 3vw;
+}
+
+.rolagem {
+    overflow-y: scroll;
+    width: 60vw;
+    height: 100vh; 
+    padding-top: 0; 
+    margin-top: 0; 
+    display: block;
+}
+
+.rolagem::-webkit-scrollbar {
+    display: none;
+}
+
+.b1 {
+   left: 15vw;
+}
+
+.b3 {
+    left: 35vw;
+ }
+
+ .b3 {
+    left: 80vw;
+ }
+
+.bola {
+   background-color: black;
+   width: 12vw;
+   height: 12vw;
+   border-radius: 50%;
+   position: fixed;
+   top: 100vh;
+   z-index: -100;
+   animation: bolinha 3s linear;
+}@keyframes bolinha {
+    to {
+        transform: translateY(-132vh);
+    }
+}
+
+.opa {
+    background-color: rgb(99, 0, 169);
+    width: 8vw;
+    transform-style: flat;
+    height: 8vw;
+    border-radius: 50%;
+    position: fixed;
+    object-fit: cover;
+    transform-origin: 20% 20%;
+    z-index: -10000;
+    opacity: 1;
+    animation: opa 3s linear;
+ }@keyframes opa {
+     to {
+         transform: translateY(-30vw);
+         opacity: 0;
+     }
+ }
+
+  @media (max-width: 800px) {
+
+     .marca { 
+         font-size: 5vw;
+         padding-bottom: 2vw;
+         padding-top: 6vw;
+     }
+     
+     .perfil {
+         width: 40vw;
+         height: 40vw;
+         margin: 8vw auto;
+         }
+     
+     .lado {
+         width: 40vw;
+         height: 40vw;
+     }
+     
+     .l1 {
+         transform: translateZ(3vw);
+     }
+     
+     .l2 {
+         transform: translateZ(-3vw);
+     }.l2 img{
+         filter: drop-shadow(0 0 0.8vw rgb(174, 0, 255));
+     }
+     
+     .l3 {
+         transform: translateZ(2.98vw);
+     }
+     
+     .l4 {
+         transform: translateZ(-2.98vw);
+     }
+     
+     .meio {
+         height: 40vw;
+         width: 5.98vw;
+     }
+     
+     h1 {
+         font-size: 10vw;
+         margin-top: 4vw;
+         margin-bottom: 1vw;
+     } h2 {
+         font-size: 7vw;
+         margin-top: 6vw;
+         margin-bottom: 6vw;
+     }
+     
+     .retangulo {
+         border: 1vw solid rgb(102, 1, 169);
+         margin-top: 2vw;
+         margin: 2vw auto;
+         gap: 3vw;
+         height: 16vw;
+         width: 80vw;
+         border-radius: 6vw;
+     }.retangulo:hover {
+         transform: scale(1.0);
+     }
+     
+     .retangulo h3 {
+         font-size: 6vw;
+     }
+     
+     i {
+         font-size: 6vw;
+     }
+     
+     .rolagem {
+         width: 100vw;
+     }
+     
+     .b1 {
+        left: 6vw;
+     }
+     
+     .b3 {
+         left: 27.5vw;
+      }
+     
+      .b3 {
+         left: 70vw;
+      }
+     
+     .bola {
+        width: 25vw;
+        height: 25vw;
+     }
+     
+     .opa {
+         width: 18vw;
+         height: 18vw;
+         object-fit: cover;
+      }@keyframes opa {
+          to {
+              transform: translateY(-30vw);
+              opacity: 0;
+          }
+      }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
